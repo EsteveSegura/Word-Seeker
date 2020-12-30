@@ -5,7 +5,7 @@ export default function buildMakeUser({ sanitize }) {
         if (!userData.id) throw new Error('fail3')
         if (!userData.email) throw new Error('fail4')
         if (!userData.streams) throw new Error('fail5')
-
+        if (!userData.logo) throw new Error('fail6')
         let sanitizedName = sanitize(userData.name).trim()
 
         return {

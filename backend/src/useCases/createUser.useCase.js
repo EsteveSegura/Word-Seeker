@@ -6,6 +6,7 @@ export default function makeAddUser({ userData, twitchAuth }) {
         const user = makeUser({
             displayName: auth.display_name,
             name: auth.name,
+            logo: auth.logo,
             email: auth.email,
             id: auth._id,
             streams: [],

@@ -36,6 +36,7 @@ export const store = reactive({
             try {
                 let auth = await axios.post(`http://localhost:3001/streamdata/${window.location.hash.split("=")[1].split("&")[0]}`);
                 localStorage.auth = JSON.stringify(auth.data)
+                console.log(auth.data)
                 store.login.data = auth.data;
                 store.login.status = true;
                 await store.getStream();
@@ -61,7 +62,7 @@ export const store = reactive({
 
     getStream: async () => {
         try {
-            let stream = await axios.get(`http://localhost:3001/streamdata/stream/solmyr_ow`);//${store.login.data.name}
+            let stream = await axios.get(`http://localhost:3001/streamdata/stream/${store.login.data.name}`);//${store.login.data.name}
             console.log(stream)
             store.stream = stream.data.stream
             let createT = await axios.post(`http://localhost:3001/streams/create`, {
