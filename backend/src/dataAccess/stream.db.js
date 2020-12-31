@@ -1,6 +1,5 @@
 export default function streamDb({ streamModel }) {
     async function addStream(stream) {
-        console.log(stream)
         let findExistingStream = await streamModel.findOne({ twitchId: stream.twitchId })
         if (findExistingStream) return findExistingStream
         let newStream = new streamModel(stream)
@@ -20,8 +19,9 @@ export default function streamDb({ streamModel }) {
         );
         return updateStream
     }
-    async function findTranscript(stream) {
-        let getStream = await stream.findOne({ twitchId: stream.twitchId }).exec()
+    async function findTranscript(twitchId) {
+        let getStream = await streamModel.findOne({ twitchId: twitchId })
+        console.log(getStream)
         return getStream
     }
     return Object.freeze({

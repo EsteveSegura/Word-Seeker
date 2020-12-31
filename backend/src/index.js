@@ -5,7 +5,7 @@ const session = require('express-session');
 const helmet = require('helmet');
 
 import makeCallback from './expressCallback'
-import { addUser, getUser, getStream, addStream, addTranscript } from './controllers'
+import { addUser, getUser, getStream, addStream, addTranscript, findTranscript } from './controllers'
 
 
 const app = express()
@@ -31,6 +31,7 @@ app.get(`/user/:streamer`, makeCallback(getUser))
 app.get('/streamdata/stream/:name', makeCallback(getStream))
 app.post('/streams/create', makeCallback(addStream))
 app.post('/streams/pushtranscript', makeCallback(addTranscript))
+app.get('/streams/getstream/:idStream', makeCallback(findTranscript))
 
 app.listen(3001, () => {
     console.log('Server is listening on port 3001')
