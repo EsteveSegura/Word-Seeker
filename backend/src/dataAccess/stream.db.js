@@ -21,7 +21,7 @@ export default function streamDb({ streamModel }) {
     }
     async function findTranscript(twitchId) {
         let getStream = await streamModel.findOne({ twitchId: twitchId })
-        console.log(getStream)
+        console.log(getStream.offset)
         return getStream
     }
     return Object.freeze({

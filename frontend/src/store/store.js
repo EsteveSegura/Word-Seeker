@@ -13,6 +13,7 @@ export const store = reactive({
     recognition: {},
     crono: 0,
     player: {},
+    currentOffset: 0,
     setLogin: (val) => store.login.status = val,
     setData: (val) => store.login.data = val,
     getLoginStatus: () => store.login.status,
@@ -63,15 +64,14 @@ export const store = reactive({
 
     getStream: async () => {
         try {
-            let stream = await axios.get(`http://localhost:3001/streamdata/stream/yumland`);//${store.login.data.name} thelibertymario
+            let stream = await axios.get(`http://localhost:3001/streamdata/stream/${store.login.data.name}`);//${store.login.data.name} thelibertymario
             console.log(stream)
             store.stream = stream.data.stream
             let createT = await axios.post(`http://localhost:3001/streams/create`, {
                 owner: stream.data.stream.channel.name,
                 twitchId: stream.data.stream.videoId,
-                offset: 0
             })
-            console.log(createT)
+            if(createT.data.offset) store.offset = createT.data.offset
         } catch (error) {
             console.log(error)
             store.stream = null

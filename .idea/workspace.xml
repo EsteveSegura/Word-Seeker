@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ca9aaa12-ccb0-4eeb-a58d-41ecf56dbb14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CardUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CardUser.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/dataAccess/stream.db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/dataAccess/stream.db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/PlayerTwitch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PlayerTwitch.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/StreamCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StreamCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/TextChip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TextChip.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/Auth.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/Auth.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/Profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/Profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +63,8 @@
       <workItem from="1609335488069" duration="457000" />
       <workItem from="1609336033156" duration="1553000" />
       <workItem from="1609337600174" duration="1072000" />
-      <workItem from="1609349134367" duration="35448000" />
+      <workItem from="1609349134367" duration="49832000" />
+      <workItem from="1609541431179" duration="1324000" />
     </task>
     <servers />
   </component>

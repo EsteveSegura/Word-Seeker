@@ -1,20 +1,24 @@
 <template>
-
   <section class="text-gray-400 body-font bg-gray-900">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">{{streamData.data.owner}}</h1>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">{{ streamData.data.owner }}</h1>
         <div id="player"></div>
       </div>
       <div class="flex flex-wrap -m-4 justify-center">
-        {{searchTerm}}
-        <input type="text" placeholder="Search..." v-model="searchTerm" v-on:keyup="search" id="full-name" name="full-name" class="mb-5 w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        {{ searchTerm }}
+        <input type="text" placeholder="Search..." v-model="searchTerm" v-on:keyup="search" id="full-name"
+               name="full-name"
+               class="mb-5 w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
         <div class="flex flex-wrap justify-center">
           <TextChip
               v-for="(chip, index) in streamCopy"
               :key="index"
               :text="chip.text"
               :timeStamp="chip.timeStamp"
+              :offset="store.offset"
+              :expand="chip.expand"
+              :searchTerm="searchTerm"
           />
         </div>
       </div>
@@ -45,16 +49,30 @@ export default {
         `http://localhost:3001/streams/getstream/${router.currentRoute._rawValue.params.idvideo}`
     );
 
+    streamData.value.data.transcription = streamData.value.data.transcription.map((el) => Object.assign(el, {expand: false}))
+
     transcript.value = streamData.value.data.transcription;
     streamCopy.value = streamData.value.data.transcription;
 
     function search() {
-      if (searchTerm.value == "") streamCopy.value = transcript.value;
-      if (searchTerm.value != "")
-        streamCopy.value = transcript.value.filter((el) =>
-            el.text.includes(searchTerm.value)
-        );
+      if (searchTerm.value == "") {
+        streamCopy.value = transcript.value;
+        store.expand = false
+        streamCopy.value = streamCopy.value.map((el ) => {
+          el.expand = false;
+          return el;
+        })
+
+      }
+      if (searchTerm.value != "") {
+        store.expand = true
+        streamCopy.value = transcript.value.filter((el) => {
+          el.expand = true;
+          return el.text.includes(searchTerm.value)
+        });
+      }
     }
+
 
     return {router, store, transcript, search, searchTerm, streamCopy, streamData};
   },
