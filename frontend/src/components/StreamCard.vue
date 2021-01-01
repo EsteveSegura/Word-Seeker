@@ -1,4 +1,5 @@
 <template>
+  <h1>SAD</h1>
   <div
     :style="{
       backgroundImage:
@@ -40,7 +41,7 @@ export default {
     Recorder
   },
    setup() {
-       /*
+
     setInterval(async () => {
       try {
         if (store.stream != {}) {
@@ -50,7 +51,7 @@ export default {
         console.log(error);
       }
     }, 300000);
-    */
+
     return { store };
   },
 };

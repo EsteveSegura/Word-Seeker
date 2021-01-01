@@ -10,15 +10,16 @@ export const store = reactive({
     },
     errs: [],
     stream: false,
+    recognition: {},
+    crono: 0,
+    player: {},
     setLogin: (val) => store.login.status = val,
     setData: (val) => store.login.data = val,
     getLoginStatus: () => store.login.status,
     logout: async() => {
         try {
-
             router.push({ name: "Home" })
             store.login.status = false
-
             store.login.data = {}
             store.stream = false
             localStorage.removeItem('auth')
@@ -62,7 +63,7 @@ export const store = reactive({
 
     getStream: async () => {
         try {
-            let stream = await axios.get(`http://localhost:3001/streamdata/stream/${store.login.data.name}`);//${store.login.data.name}
+            let stream = await axios.get(`http://localhost:3001/streamdata/stream/yumland`);//${store.login.data.name} thelibertymario
             console.log(stream)
             store.stream = stream.data.stream
             let createT = await axios.post(`http://localhost:3001/streams/create`, {
@@ -73,7 +74,7 @@ export const store = reactive({
             console.log(createT)
         } catch (error) {
             console.log(error)
-            store.stream = false
+            store.stream = null
         }
     },
     craeteTranscript: async (text, crono) => {
@@ -87,8 +88,5 @@ export const store = reactive({
         } catch (error) {
             console.log(error)
         }
-    },
-    recognition: {},
-    crono: 0,
-    player: {},
+    }
 });

@@ -1,6 +1,6 @@
 <template>
   <div v-if="!store.stream" class="m-auto" >
-    ...
+    STREAM NOT STARTED
   </div>
   <div v-else class="m-auto">
     <StreamC />

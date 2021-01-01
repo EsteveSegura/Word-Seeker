@@ -1,6 +1,6 @@
 <template>
-  <div @click="goToChip" class="bg-red-800 p-3 m-3 rounded-2xl text-white" >
-    {{ text }}
+  <div @click="goToChip" class="p-3 m-3 rounded-2xl text-white flex-shrink-0 text-white bg-indigo-500 border-0 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
+    {{ text.length >= 35 ? text.slice(0,35) + "..." : text }}
   </div>
 </template>
 

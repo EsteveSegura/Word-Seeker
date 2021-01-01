@@ -7,7 +7,7 @@
         class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
       >
         <Logo />
-        <router-link class="ml-3 text-xl" to="/">TestApp</router-link>
+        <router-link class="ml-3 text-xl" to="/">Word Seeker</router-link>
       </a>
       <div
         v-if="store.login.status == false"

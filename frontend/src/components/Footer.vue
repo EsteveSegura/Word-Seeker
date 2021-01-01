@@ -7,12 +7,12 @@
         class="flex title-font font-medium items-center md:justify-start justify-center text-white"
       >
         <Logo />
-        <span class="ml-3 text-xl">TestApp</span>
+        <span class="ml-3 text-xl">Word Seeker</span>
       </a>
       <p
         class="text-sm text-gray-600 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4"
       >
-        2020 tech test —
+        2021 Word Seeker —
         <a
           href="https://twitter.com/girlazote"
           class="text-gray-500 ml-1"
@@ -27,9 +27,7 @@
         <a href="https://twitter.com/girlazote" class="ml-3 text-gray-600">
           <Twitter />
         </a>
-        <a href="https://instagram.com/estevesegura" class="ml-3 text-gray-600">
-          <Instagram />
-        </a>
+
       </span>
     </div>
   </footer>
@@ -38,12 +36,10 @@
 <script>
 import Logo from "@/components/svg/Logo.vue";
 import Twitter from "@/components/svg/Twitter.vue";
-import Instagram from "@/components/svg/Instagram.vue";
 export default {
   components: {
     Logo,
     Twitter,
-    Instagram,
   },
 };
 </script>

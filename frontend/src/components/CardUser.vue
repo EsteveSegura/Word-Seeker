@@ -60,7 +60,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
   .button-glow {
     background-color: #6617cb;
