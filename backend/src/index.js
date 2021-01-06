@@ -25,6 +25,7 @@ app.use(session({
     cookie: { secure: false, maxAge: process.env.COOKIE_MAX_AGE || 1000 * 60 * 4 }
 }));
 
+app.use('/', express.static(__dirname + '/public'));
 
 app.post(`/streamdata/:token`, makeCallback(addUser))
 app.get(`/user/:streamer`, makeCallback(getUser))

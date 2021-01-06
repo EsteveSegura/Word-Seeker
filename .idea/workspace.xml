@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca9aaa12-ccb0-4eeb-a58d-41ecf56dbb14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/dataAccess/stream.db.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/dataAccess/stream.db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PlayerTwitch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PlayerTwitch.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/TextChip.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TextChip.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fingerpose" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gir_botten_discord" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
@@ -64,7 +62,10 @@
       <workItem from="1609336033156" duration="1553000" />
       <workItem from="1609337600174" duration="1072000" />
       <workItem from="1609349134367" duration="49832000" />
-      <workItem from="1609541431179" duration="1324000" />
+      <workItem from="1609541431179" duration="3494000" />
+      <workItem from="1609553697510" duration="3097000" />
+      <workItem from="1609691551361" duration="3385000" />
+      <workItem from="1609804434145" duration="5925000" />
     </task>
     <servers />
   </component>

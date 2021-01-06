@@ -22,7 +22,8 @@ export default {
     const innerText = ref("123")
 
     function goToChip() {
-      store.player.seek(props.timeStamp + store.offset);
+      store.player.seek(props.timeStamp);
+      //store.player.seek(props.timeStamp + store.offset);
     }
 
     return {store, goToChip, innerText};
